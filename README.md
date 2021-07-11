@@ -17,7 +17,7 @@ Simple to use and add new vaults using a couple commands.
 | --- | --- |
 | `/open <vault_name>` | `Open a vault of the specified <vault_name>` |
 | `/open <vault_name> <player_name>` | `Open a players vault. Player must be online.` |
-| `/privatevaultsadd [<vault_name>] [<title>] [<size>]` | `Adds a new vault.` |
+| `/privatevaultsadd [<vault_name>] [<title>] [<size>]` | `Adds a new vault. Use underscored "_" in the title to add spaces between words.` |
 | `/privatevaultsremove [<vault_name>]` | `Removes a vault if it exisits.` |
 | `/privatevaultsreset [<vault_name>]` | `Resets all inventory data of an exisiting vault. Can't be undone.`
 
@@ -34,5 +34,8 @@ Simple to use and add new vaults using a couple commands.
 | `privatevaults.admin.remove` | `Gives permission to /privatevaultsremove command` |
 | `privatevaults.admin.reset` | `Gives permission to /privatevaultsreset command` |
 
+## Future ideas/updates
 
+- Opening offline player vaults.
+- Deleting individual players vaults.
 
