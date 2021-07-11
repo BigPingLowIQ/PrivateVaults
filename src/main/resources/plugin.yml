@@ -1,0 +1,63 @@
+name: PrivateVaults
+main: com.privatevaults.PrivateVaults
+
+author: BigPingLowIQ
+description: Using this plugin you can make private vaults of different sizes with different permission. It has Vault permissions implemented and it must be installed for PrivateVaults to work.
+
+version: 1.0
+api-version: 1.13
+database: true
+
+commands:
+  open:
+    description: Open the private vaults added by the server.
+    usage: /<command> [vault]
+    permission: PrivateVaults.open
+    permission-message: You don't have permission to use the command.
+    aliases: [o]
+  PrivateVaultsAdd:
+    description: Add a new vault.
+    usage: /<command> [inventory_name] [inventory_title] [size]
+    permission: PrivateVaults.admin.add
+    permission-message: You don't have permission to use the command.
+  PrivateVaultsRemove:
+    description: Remove an existing vault.
+    usage: /<command> [vault]
+    permission: PrivateVaults.admin.remove
+    permission-message: You don't have permission to use the command.
+  PrivateVaultsReset:
+    description: Resets an existing vault. !WARNING! IT IS PERMANENT.
+    usage: /<command> [vault]
+    permission: PrivateVaults.admin.reset
+    permission-message: You don't have permission to use the command.
+
+permissions:
+  PrivateVaults.*:
+    description: Gives permission to all commands.
+    children:
+      PrivateVaults.open: true
+      PrivateVaults.open.invsee: true
+      PrivateVaults.admin.add: true
+      PrivateVaults.admin.remove: true
+      PrivateVaults.admin.reset: true
+      PrivateVaults.vault.*: true
+  PrivateVaults.vault.*:
+    description: Gives permission to open any of the exisiting vaults.
+    default: not op
+  PrivateVaults.open:
+    description: Open your private vaults.
+    default: not op
+  PrivateVaults.open.invsee:
+    description: Open other people vaults.
+    default: op
+    children:
+      PrivateVaults.open: true
+  PrivateVaults.admin.add:
+    description: Add a new private vault.
+    default: op
+  PrivateVaults.admin.remove:
+    description: Remove an exisiting vault.
+    default: op
+  PrivateVaults.admin.reset:
+    description: Reset an existing vault.
+    default: op
