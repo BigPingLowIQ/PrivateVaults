@@ -21,8 +21,8 @@ Simple to use and add new vaults using a couple commands.
 | `/privatevaultsremove [<vault_name>]` | `Removes a vault if it exisits.` |
 | `/privatevaultsreset [<vault_name>]` | `Resets all inventory data of an exisiting vault. Can't be undone.`
 ### Additional usage info
-##### `<vault_name> can't have special characters.`
-##### `<size> must be any of the following numbers: 9, 18, 27, 36, 45, 54`
+##### - `<vault_name> can't have special characters.`
+##### - `<size> must be any of the following numbers: 9, 18, 27, 36, 45, 54`
 
 ## Permissions
 
