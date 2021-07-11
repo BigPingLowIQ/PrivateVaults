@@ -16,7 +16,23 @@ Simple to use and add new vaults using a couple commands.
 | Command | Usage |
 | --- | --- |
 | `/open <vault_name>` | `Open a vault of the specified <vault_name>` |
+| `/open <vault_name> <player_name>` | `Open a players vault. Player must be online.` |
 | `/privatevaultsadd [<vault_name>] [<title>] [<size>]` | `Adds a new vault.` |
 | `/privatevaultsremove [<vault_name>]` | `Removes a vault if it exisits.` |
 | `/privatevaultsreset [<vault_name>]` | `Resets all inventory data of an exisiting vault. Can't be undone.`
+
+## Permissions
+
+| Permission | Usage |
+| --- | --- |
+| `privatevaults.*` | `Gives permission to all commands.` |
+| `privatevaults.open` | `Gives permission to use /open command, does not include access to any vault` |
+| `privatevaults.open.invsee` | `Gives permission to open other players vaults. Player must be online. Note. Anyone with this permission can open any of his own vaults.`|
+| `privatevaults.vault.* ` | `Gives permmission to open any of the exisiting vaults.` |
+| `privatevaults.vault.<vault_name>` | `Gives permission to open a specified vault.` |
+| `privatevaults.admin.add` | `Gives permission to /privatevaultsadd command` |
+| `privatevaults.admin.remove` | `Gives permission to /privatevaultsremove command` |
+| `privatevaults.admin.reset` | `Gives permission to /privatevaultsreset command` |
+
+
 
