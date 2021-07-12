@@ -41,5 +41,5 @@ Simple to use and add new vaults using a couple commands.
 
 - Opening offline player vaults.
 - Deleting individual player vaults.
-- Automatic update check.
+- Automatic update check. (Added)
 
