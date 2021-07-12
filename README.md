@@ -15,11 +15,11 @@ Simple to use and add new vaults using a couple commands.
 
 | Command | Usage |
 | --- | --- |
-| `/open <vault_name>` | `Open a vault of the specified <vault_name>` |
-| `/open <vault_name> <player_name>` | `Open a players vault. Player must be online.` |
+| `/open [<vault_name>]` | `Open a vault of the specified <vault_name>` |
+| `/open [<vault_name>] [<player_name>]` | `Open a players vault. Player must be online.` |
 | `/privatevaultsadd [<vault_name>] [<title>] [<size>]` | `Adds a new vault. Use underscores "_" in the title to add spaces between words.` |
 | `/privatevaultsremove [<vault_name>]` | `Removes a vault if it exisits.` |
-| `/privatevaultsreset [<vault_name>]` | `Resets all inventory data of an exisiting vault. Can't be undone.`
+| `/privatevaultsreset [<vault_name>]` | `Resets all inventory data of an exisiting vault. Can't be undone.` |
 ### Additional usage info
 ##### - `<vault_name> can't have special characters.`
 ##### - `<size> must be any of the following numbers: 9, 18, 27, 36, 45, 54`
