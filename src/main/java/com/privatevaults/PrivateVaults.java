@@ -21,7 +21,7 @@ public final class PrivateVaults extends JavaPlugin {
         // Plugin startup logic
         instance = this;
 
-
+        new UpdateChecker(this,94151);
 
         getConfig().options().copyDefaults();
         saveDefaultConfig();
