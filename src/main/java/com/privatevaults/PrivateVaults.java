@@ -23,6 +23,9 @@ public final class PrivateVaults extends JavaPlugin {
 
         new UpdateChecker(this,94151);
 
+        int pluginId = 12089;
+        Metrics metrics = new Metrics(instance,pluginId);
+
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 

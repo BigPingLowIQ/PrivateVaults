@@ -4,7 +4,7 @@ main: com.privatevaults.PrivateVaults
 author: BigPingLowIQ
 description: Using this plugin you can make private vaults of different sizes with different permission. It has Vault permissions implemented and it must be installed for PrivateVaults to work.
 
-version: 1.0.1
+version: 1.0.2
 api-version: 1.13
 database: true
 
