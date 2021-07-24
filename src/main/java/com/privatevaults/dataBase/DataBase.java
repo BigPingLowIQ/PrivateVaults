@@ -27,10 +27,7 @@ final class DataBase {
     private static ScheduledFuture<?> dataBaseSaverScheduler = null;
     private static final HashMap<String,HashMap<String,Inventory>> inventory_tables = new HashMap<>();
     private static List<String> table_names = new ArrayList<>();
-    static{
-        //Creates the address where the database is going to be created
 
-    }
 
     public static void setup(){
         StringBuilder sb = new StringBuilder();
@@ -196,7 +193,7 @@ final class DataBase {
         if(table_names.contains(table_name)){
             String sql = "DROP TABLE IF EXISTS \""+table_name.toLowerCase()+"\"";
             try(Connection connection = connect();
-                Statement statement = connection.createStatement();
+                Statement statement = connection.createStatement()
                 ){
                 statement.execute(sql);
             }catch (SQLException e){ e.printStackTrace();}
@@ -322,7 +319,7 @@ final class DataBase {
 
     public static void cancelScheduler(){
         if(dataBaseSaverScheduler!=null) {
-            dataBaseSaverScheduler.cancel(true);
+            dataBaseSaverScheduler.cancel(false);
         }
     }
 

@@ -1,6 +1,8 @@
 package com.privatevaults;
 
 
+import com.privatevaults.GUI.GUIEvent;
+import com.privatevaults.GUI.VaultGUI;
 import com.privatevaults.commands.AdminPVAdd;
 import com.privatevaults.commands.AdminPVRemove;
 import com.privatevaults.commands.AdminPVReset;
@@ -21,7 +23,6 @@ public final class PrivateVaults extends JavaPlugin {
         // Plugin startup logic
         instance = this;
 
-        new UpdateChecker(this,94151);
 
         int pluginId = 12089;
         Metrics metrics = new Metrics(instance,pluginId);
@@ -30,7 +31,8 @@ public final class PrivateVaults extends JavaPlugin {
         saveDefaultConfig();
 
         DataSetup.setup();
-
+        VaultGUI.setup();
+        UpdateChecker.setup(this,94151);
 
         getCommand("PrivateVaultsAdd").setExecutor(new AdminPVAdd());
         getCommand("PrivateVaultsRemove").setExecutor(new AdminPVRemove());
@@ -38,8 +40,7 @@ public final class PrivateVaults extends JavaPlugin {
         getCommand("open").setExecutor(new OpenVault());
 
         getServer().getPluginManager().registerEvents(new DataEventLoader(),instance);
-
-
+        getServer().getPluginManager().registerEvents(new GUIEvent(),instance);
 
 
     }
@@ -49,6 +50,7 @@ public final class PrivateVaults extends JavaPlugin {
         // Plugin shutdown logic
 
         DataMethod.cancelScheduler();
+        UpdateChecker.cancelScheduler();
         DataMethod.saveAllData();
 
     }

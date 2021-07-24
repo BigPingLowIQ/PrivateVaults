@@ -15,6 +15,7 @@ Simple to use and add new vaults using a couple commands.
 
 | Command | Usage |
 | --- | --- |
+| `/open` | `Opens a menu that shows a list of all vaults and lets you open them.` |
 | `/open [<vault_name>]` | `Open a vault of the specified <vault_name>` |
 | `/open [<vault_name>] [<player_name>]` | `Open a players vault. Player must be online.` |
 | `/privatevaultsadd [<vault_name>] [<title>] [<size>]` | `Adds a new vault. Use underscores "_" in the title to add spaces between words.` |
@@ -36,6 +37,16 @@ Simple to use and add new vaults using a couple commands.
 | `privatevaults.admin.add` | `Gives permission to /privatevaultsadd command.` |
 | `privatevaults.admin.remove` | `Gives permission to /privatevaultsremove command.` |
 | `privatevaults.admin.reset` | `Gives permission to /privatevaultsreset command.` |
+
+## Changelog
+- ###v1.0.0
+  - The initial release of this plugin.
+- ###v1.0.1
+  - Added auto update checking.
+- ###v1.0.2
+  - Added bstats support.
+- ###v1.1
+  - Added a menu when using `/open`
 
 ## Future ideas/updates
 

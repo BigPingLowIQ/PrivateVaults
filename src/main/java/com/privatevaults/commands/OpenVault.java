@@ -1,8 +1,10 @@
 package com.privatevaults.commands;
 
+import com.privatevaults.GUI.VaultGUI;
 import com.privatevaults.dataBase.DataMethod;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
@@ -25,9 +27,11 @@ public class OpenVault implements TabExecutor {
             if(table_names.contains(args[0])){
                 if(player.hasPermission(DataMethod.getPermission(args[0])) || player.hasPermission("PrivateVaults.Open.invsee")){
                     player.openInventory(DataMethod.getInventory(args[0],player));
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 1.5f, 0.8f);
                     return true;
                 }else{
                     sender.sendMessage(ChatColor.RED +"You don't have permission to do this.");
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 1.3f, 0.7f);
                 }
             }
 
@@ -37,6 +41,7 @@ public class OpenVault implements TabExecutor {
                     Player target = Bukkit.getPlayer(args[1]);
                     if (target != null) {
                         player.openInventory(DataMethod.getInventory(args[0], target));
+                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 1.5f, 0.8f);
                         return true;
                     } else {
                         sender.sendMessage(ChatColor.RED + "Player is offline or the name is wrong.");
@@ -44,7 +49,10 @@ public class OpenVault implements TabExecutor {
                 }
             }else{
                 sender.sendMessage(ChatColor.RED +"You don't have permission to do this.");
+                player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 1.3f, 0.7f);
             }
+        }else if(args.length==0){
+            VaultGUI.openGUI(player);
         }
 
         return true;
