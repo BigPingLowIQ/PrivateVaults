@@ -39,13 +39,13 @@ Simple to use and add new vaults using a couple commands.
 | `privatevaults.admin.reset` | `Gives permission to /privatevaultsreset command.` |
 
 ## Changelog
-- ###v1.0.0
+- v1.0.0
   - The initial release of this plugin.
-- ###v1.0.1
+- v1.0.1
   - Added auto update checking.
-- ###v1.0.2
+- v1.0.2
   - Added bstats support.
-- ###v1.1
+- v1.1
   - Added a menu when using `/open`
 
 ## Future ideas/updates
