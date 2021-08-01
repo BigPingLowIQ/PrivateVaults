@@ -45,7 +45,8 @@ public final class UpdateChecker {
                     } else {
                         Bukkit.getConsoleSender().sendMessage(ChatColor.RED+"\nPrivate Vaults is outdated.\n" +
                                 "You are using version "+plugin.getDescription().getVersion()+", but version "+newVer +" is the newest.\n"+
-                                "Please upgrade to the new version here https://www.spigotmc.org/resources/private-vaults.94151/");
+                                "Please upgrade to the new version here https://www.spigotmc.org/resources/private-vaults.94151/\n"+
+                                "To report bugs contact me on my discord server https://discord.gg/rA6WHrg7Re");
                     }
                 }
             } catch (IOException exception) {
