@@ -3,6 +3,7 @@ package com.privatevaults.dataBase;
 import com.privatevaults.PrivateVaults;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -14,6 +15,7 @@ import org.bukkit.util.io.BukkitObjectOutputStream;
 import javax.xml.crypto.Data;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.sql.*;
 import java.util.*;
@@ -34,7 +36,7 @@ final class DataBase {
         sb.append("jdbc:sqlite:");
         String path = Bukkit.getServer().getPluginManager().getPlugin("PrivateVaults").getDataFolder().getAbsolutePath();
         sb.append(path);
-        sb.append("\\privateVaults.db");
+        sb.append(File.separator).append("privateVaults.db");
         url = sb.toString();
 
         setupScheduler();
@@ -250,6 +252,7 @@ final class DataBase {
     private static Connection connect(){
         Connection conn = null;
         try{
+
             conn = DriverManager.getConnection(url);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
